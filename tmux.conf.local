@@ -1,0 +1,5 @@
+# Horizontal split pane, 25% high
+bind _ split-window -v -p 25
+
+# Veritcal split pane, 80 columns wide
+bind | split-window -h -l 80
