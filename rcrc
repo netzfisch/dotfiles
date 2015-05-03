@@ -1,2 +1,2 @@
-EXCLUDES="README.md LICENSE"
-DOTFILES_DIRS="$HOME/Development/dotfiles $HOME/development/dotfiles-thoughtbot"
+EXCLUDES="README.md LICENSE thoughtbot"
+DOTFILES_DIRS="$HOME/Development/dotfiles $HOME/Development/dotfiles/thoughtbot"

@@ -3,7 +3,8 @@ netzfisch does also dotfiles
 
 These dotfiles personalize my system, which are based + inspired by
 [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles) and work together
-using [the `*.local` convention](http://robots.thoughtbot.com/manage-team-and-personal-dotfiles-together-with-rcm).
+using the [`*.local`](http://robots.thoughtbot.com/manage-team-and-personal-dotfiles-together-with-rcm)
+convention.
 
 The dotfiles focus on ruby development with tools like git, tmux, vim and
 Ethan Schoonover [solarized-theme](https://github.com/altercation/solarized) in
@@ -23,7 +24,7 @@ Set the color scheme to solarized in LXterminal:
 
     [Edit] > [Settings] > [Colors] > [Presets > Solarized(dark)]
 
-Probably change single colors like light-green #55FF55 and light-blue #5555FF.
+Probably change single colors like light-green to #55FF55 and light-blue to #5555FF.
 
 **Heads-up** - If you run into trouble concerning **terminal colors**, check this
 excellent [post](http://push.cx/2008/256-color-xterms-in-ubuntu) for a general
@@ -41,8 +42,8 @@ Install
 Clone onto your laptop:
 
     cd ~/Development
-    git clone git://github.com/thoughtbot/dotfiles.git dotfiles-thoughtbot
     git clone git://github.com/netzfisch/dotfiles.git
+    git clone git://github.com/thoughtbot/dotfiles.git dotfiles/thoughtbot
 
 Install:
 
@@ -55,7 +56,7 @@ Update
 
 Do once:
 
-    cd ~/Development/dotfiles-thoughtbot
+    cd ~/Development/dotfiles/thoughtbot
     git remote add upstream git@github.com:thoughtbot/dotfiles.git
 
 Each time you want to update from upstream/master:
@@ -79,20 +80,20 @@ section and ...
 
 [vim](http://www.vim.org/) configuration:
 
-* [Lean status/tabline](https://github.com/bling/vim-airline)
-* [Solarized color scheme](https://github.com/croaky/vim-colors-github)
+* [lean & mean status/tabline](https://github.com/bling/vim-airline)
+* [solarized color scheme](https://github.com/croaky/vim-colors-github)
 
 [zsh](http://zsh.sourceforge.net/FAQ/zshfaq01.html) configuration:
 
 * aliases
   * `tde`, `ted`, `tds`, `tsd` to translate between englisch, german and
     spanisch with [termit][termit]
+  * `todo` to edit a plain text todo-file, located in the Dropbox folder
 * `PATH` additions for
   * [rbenv][rbenv]
   * [Heroku toolbelt][heroku]
   * [node modules][nvm]
-  * [Android][android]
-* `todo` to edit plain text todo file, located in dropbox
+  * [Android SDK][android]
 
 [termit]: https://github.com/pawurb/termit
 [rbenv]: https://github.com/sstephenson/rbenv
