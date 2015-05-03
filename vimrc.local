@@ -1,0 +1,14 @@
+set colorcolumn=80
+
+" Color scheme
+"set background=light
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+colorscheme solarized
+call togglebg#map("<F5>")
+
+" Enable mouse usage for 'all modes'
+set mouse=a
+
+" Set custom rspec command to use pre-loader spring in vim-rspec
+"let g:rspec_command = "!spring rspec {spec}"
