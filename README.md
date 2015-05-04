@@ -20,17 +20,17 @@ Set zsh as your login shell:
 
     chsh -s /bin/zsh
 
-Set the color scheme to solarized in LXterminal:
+Set in the LXterminal the color scheme to Solarized or any other prefered one:
 
     [Edit] > [Settings] > [Colors] > [Presets > Solarized(dark)]
 
-Probably change single colors like light-green to #55FF55 and light-blue to #5555FF.
-
 **Heads-up** - If you run into trouble concerning **terminal colors**, check this
-excellent [post](http://push.cx/2008/256-color-xterms-in-ubuntu) for a general
-overview - "how things supposed to work"!
+excellent [post](http://push.cx/2008/256-color-xterms-in-ubuntu) from Peter
+Harkins for a general overview and "how things supposed to work" or a more
+specific approach concerning
+[256 colors in vim](http://vim.wikia.com/wiki/256_colors_in_vim)!
 
-Install [rcm](https://github.com/mike-burns/rcm):
+Get [rcm](https://github.com/mike-burns/rcm):
 
     sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
     sudo apt-get update
@@ -45,11 +45,13 @@ Clone onto your laptop:
     git clone git://github.com/netzfisch/dotfiles.git
     git clone git://github.com/thoughtbot/dotfiles.git dotfiles/thoughtbot
 
-Install:
+Generate the "glue":
 
     env RCRC=$HOME/Development/dotfiles/rcrc rcup
 
-This will create symlinks for config files in your home directory.
+This will create symlinks for config files in your home directory. To list all
+created ones use `lsrc` or delete all with `rcdn`! See `man rcup` for the
+full feature set.
 
 Update
 ------
@@ -70,7 +72,7 @@ What's in it?
 -------------
 
 **Everything** listed at ThoughtBot's [content](https://github.com/thoughtbot/dotfiles#whats-in-it)
-section and ...
+section and my ...
 
 [git](http://git-scm.com/) configuration:
 
@@ -104,7 +106,7 @@ section and ...
 Credits
 -------
 
-Thanks to [thoughtbot](http://thoughtbot.com/) and all contributors!
+Thanks to [ThoughtBot](http://thoughtbot.com/) and all contributors!
 
 These dotfiles are free software and may be redistributed under the terms
 specified in the [LICENSE](LICENSE).
