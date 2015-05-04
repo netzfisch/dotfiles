@@ -1,0 +1,9 @@
+# Add rbenv to PATH and initialize
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# Add nodejs to PATH for local installs
+PATH=$HOME/.node/bin:$PATH
+
+# Add Android-SDK to PATH for local builds
+PATH=${PATH}:$HOME/Development/android-sdk/platform-tools:$HOME/Development/android-sdk/tools
