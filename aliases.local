@@ -10,6 +10,9 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
+# docker - set default docker machine
+alias sdd='eval $(docker-machine env default)'
+
 # productivity
 alias todo='$EDITOR ~/Dropbox/todo'
 
