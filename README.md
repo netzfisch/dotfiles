@@ -80,10 +80,12 @@ section and my ...
   * `l` for tight, colored, log output
 * name and email
 
-[vim](http://www.vim.org/) configuration:
+[vim](http://www.vim.org/) **default plugin** configuration ... to add further
+modify vimrc.bundle.local  and do `bash$: rcup` && `vim$: PlugInstall`:
 
 * [lean & mean status/tabline](https://github.com/bling/vim-airline)
 * [solarized color scheme](https://github.com/croaky/vim-colors-github)
+* [typescript syntax highlighting](https://github.com/leafgarland/typescript-vim)
 
 [zsh](http://zsh.sourceforge.net/FAQ/zshfaq01.html) configuration:
 

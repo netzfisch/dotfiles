@@ -1,3 +1,4 @@
 Plug 'bling/vim-airline'
 Plug 'acarapetis/vim-colors-github'
 Plug 'altercation/vim-colors-solarized'
+Plug 'leafgarland/typescript-vim'
