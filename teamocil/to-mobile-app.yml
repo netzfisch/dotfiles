@@ -1,0 +1,29 @@
+# Usage
+# -----
+# $ tmux -2
+# $ teamocil --here to-mobile-app
+# detach via 'CTRL+s d'
+# $ tmux kill-server
+
+name: teamorga-mobile-app
+windows:
+  - name: base
+    root: ~/Development/teamorga-app
+    layout: main-horizontal
+    panes:
+      - ionic serve
+      - commands:
+        - git status
+    focus: true
+
+  - name: code
+    root: ~/Development/teamorga-app
+    panes:
+      - vim
+
+  - name: console
+    root: ~/Development/teamorga-app
+    layout: main-vertical
+    panes:
+      - mc
+      - ll

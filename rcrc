@@ -1,2 +1,3 @@
 EXCLUDES="README.md LICENSE thoughtbot"
 DOTFILES_DIRS="$HOME/Development/dotfiles $HOME/Development/dotfiles/thoughtbot"
+SYMLINK_DIRS="teamocil"

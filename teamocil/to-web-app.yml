@@ -1,0 +1,35 @@
+# Usage
+# -----
+# $ tmux -2
+# $ teamocil --here to-web-app
+# detach via 'CTRL+s d'
+# $ tmux kill-server
+
+name: teamorga-web-app
+windows:
+  - name: base
+    root: ~/Development/teamorga.heroku.com
+    layout: main-horizontal
+    panes:
+      - foreman start web
+      - commands:
+          - git status
+        focus: true
+
+  - name: test
+    root: ~/Development/teamorga.heroku.com
+    panes:
+      - bundle exec guard
+
+  - name: code
+    root: ~/Development/teamorga.heroku.com
+    panes:
+      - vim
+    focus: true
+
+  - name: console
+    root: ~/Development/teamorga.heroku.com
+    layout: main-vertical
+    panes:
+      - mc
+      - rails console

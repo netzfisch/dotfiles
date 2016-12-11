@@ -13,3 +13,6 @@ PATH=$HOME/.node/bin:$PATH
 
 # Add Android-SDK to PATH for local builds
 PATH=${PATH}:$HOME/Development/android-sdk/platform-tools:$HOME/Development/android-sdk/tools
+
+# Enable autocompletion for teamocil
+compctl -g '~/.teamocil/*(:t:r)' teamocil
