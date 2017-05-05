@@ -12,7 +12,13 @@ eval "$(rbenv init -)"
 PATH=$HOME/.node/bin:$PATH
 
 # Add Android-SDK to PATH for local builds
-PATH=${PATH}:$HOME/Development/android-sdk/platform-tools:$HOME/Development/android-sdk/tools
+#PATH=${PATH}:$HOME/Development/android-sdk/platform-tools:$HOME/Development/android-sdk/tools
+if [ "$(uname)" == "Darwin" ]; then
+      export ANDROID_SDK_HOME=/usr/local/share/android-sdk
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+      export ANDROID_SDK_HOME=$HOME/.android/sdk
+fi
+export PATH=${PATH}:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools
 
 # Enable autocompletion for teamocil
 compctl -g '~/.teamocil/*(:t:r)' teamocil
