@@ -11,6 +11,9 @@ eval "$(rbenv init -)"
 # Add nodejs to PATH for local installs
 PATH=$HOME/.node/bin:$PATH
 
+# Add maven to PATH for local installs
+PATH=$HOME/.apache-maven-3.5.0/bin:$PATH
+
 # Add Android-SDK to PATH for local builds
 #PATH=${PATH}:$HOME/Development/android-sdk/platform-tools:$HOME/Development/android-sdk/tools
 if [ "$(uname)" == "Darwin" ]; then
@@ -19,6 +22,16 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
       export ANDROID_SDK_HOME=$HOME/.android/sdk
 fi
 export PATH=${PATH}:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/hbehrens/.google-cloud-sdk/path.zsh.inc' ]; then
+  source '/Users/hbehrens/.google-cloud-sdk/path.zsh.inc';
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/hbehrens/.google-cloud-sdk/completion.zsh.inc' ]; then
+  source '/Users/hbehrens/.google-cloud-sdk/completion.zsh.inc';
+fi
 
 # Enable autocompletion for teamocil
 compctl -g '~/.teamocil/*(:t:r)' teamocil
