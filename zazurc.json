@@ -1,0 +1,45 @@
+{
+  "hotkey": "ctrl+space",
+  "theme": "tinytacoteam/zazu-light-theme",
+  "displayOn": "detect",
+  "plugins": [
+    "tinytacoteam/zazu-calculator",
+    "tinytacoteam/zazu-chrome-bookmarks",
+    {
+      "name": "tinytacoteam/zazu-clipboard",
+      "variables": {
+        "ClipboardKey": "ctrl+shift+v"
+      }
+    },
+    "tinytacoteam/zazu-template",
+    "tinytacoteam/zazu-system",
+    "tinytacoteam/zazu-package-manager",
+    {
+      "name": "tinytacoteam/zazu-fallback",
+      "variables": {
+        "rootSearches": [
+          "gh",
+          "google",
+          "maps",
+          "translate",
+          "wiki"
+        ]
+      }
+    },
+    {
+      "name": "tinytacoteam/zazu-file-finder",
+      "variables": {
+        "append": true,
+        "directories": {
+          "filePath": [
+            "~/Development",
+            "~/Documents"
+          ]
+        }
+      }
+    },
+    "sagold/zazu-dict",
+    "nantaphop/zazu-docker",
+    "twang2218/zazu-tldr"
+  ]
+}

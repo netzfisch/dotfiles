@@ -36,6 +36,8 @@ Get [rcm](https://github.com/mike-burns/rcm):
     sudo apt-get update
     sudo apt-get install rcm
 
+Or on iOS run `brew install rcm`!
+
 Install
 -------
 
