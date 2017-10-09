@@ -17,7 +17,7 @@ alias sdd='eval $(docker-machine env default)'
 alias todo='$EDITOR ~/Dropbox/todo'
 
 # translating
-alias tde='termit de en -s'
-alias ted='termit en de -s'
-alias tds='termit de es -s'
-alias tsd='termit es de -s'
+alias tde='termit de en'
+alias ted='termit en de'
+alias tds='termit de es'
+alias tsd='termit es de'
