@@ -28,3 +28,12 @@ fi
 
 # Enable autocompletion for teamocil
 compctl -g '~/.teamocil/*(:t:r)' teamocil
+
+# Add asdf version manager
+source /home/harm/.asdf/asdf.sh
+source /home/harm/.asdf/completions/asdf.bash
+
+# Add linuxbrew to PATHs
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
