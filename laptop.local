@@ -1,3 +1,15 @@
+#!/bin/sh
+
 echo "### install own linux packages ..."
 echo "##################################"
 sudo apt install --assume-yes aptitude mc shellcheck
+
+
+brew bundle --file=- <<EOF
+EOF
+
+if [ -r "$HOME/.rcrc" ]; then
+  echo "### updating dotfiles ..."
+  echo "#########################"
+  rcup
+fi

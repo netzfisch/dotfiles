@@ -20,6 +20,8 @@ Set zsh as your login shell:
 
     chsh -s /bin/zsh
 
+Than `echo $0` will tell you `/usr/bin/zsh` :-)
+
 Set in the LXterminal the color scheme to Solarized or any other prefered one:
 
     [Edit] > [Settings] > [Colors] > [Presets > Solarized(dark)]
@@ -33,8 +35,7 @@ specific approach concerning
 Get [rcm](https://github.com/mike-burns/rcm):
 
     sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
-    sudo apt-get update
-    sudo apt-get install rcm
+    sudo apt-get update && apt-get install rcm
 
 Or on iOS run `brew install rcm`!
 
@@ -44,8 +45,8 @@ Install
 Clone onto your laptop:
 
     cd ~/Development
-    git clone git://github.com/netzfisch/dotfiles.git
-    git clone git://github.com/thoughtbot/dotfiles.git dotfiles/thoughtbot
+    git clone git@github.com:jnetzfisch/dotfiles.git
+    git clone git@github.com:thoughtbot/dotfiles.git dotfiles/thoughtbot
 
 Generate the "glue":
 
