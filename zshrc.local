@@ -4,36 +4,32 @@
 #    export TERM="xterm-256color"
 #fi
 
-# Add maven to PATH for local installs
-PATH=$HOME/.apache-maven-3.5.0/bin:$PATH
+# Add asdf version manager
+source ~/.asdf/asdf.sh
+source ~/.asdf/completions/asdf.bash
 
-# Add Android-SDK to PATH for local builds
-#PATH=${PATH}:$HOME/Development/android-sdk/platform-tools:$HOME/Development/android-sdk/tools
+# Add Android-SDK PATH
 if [ "$(uname)" == "Darwin" ]; then
-      export ANDROID_SDK_HOME=/usr/local/share/android-sdk
+  export ANDROID_SDK_HOME=/usr/local/share/android-sdk
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-      export ANDROID_SDK_HOME=$HOME/.android/sdk
+  export ANDROID_SDK_HOME=$HOME/.android/sdk
 fi
 export PATH=${PATH}:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/hbehrens/.google-cloud-sdk/path.zsh.inc' ]; then
-  source '/Users/hbehrens/.google-cloud-sdk/path.zsh.inc';
+# Add Google Cloud SDK PATH and autocompletion
+if [ -d '~/.google-cloud-sdk' ]; then
+  source '~/.google-cloud-sdk/path.zsh.inc';
+  source '~/.google-cloud-sdk/completion.zsh.inc';
 fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/hbehrens/.google-cloud-sdk/completion.zsh.inc' ]; then
-  source '/Users/hbehrens/.google-cloud-sdk/completion.zsh.inc';
-fi
-
-# Enable autocompletion for teamocil
-compctl -g '~/.teamocil/*(:t:r)' teamocil
-
-# Add asdf version manager
-source /home/harm/.asdf/asdf.sh
-source /home/harm/.asdf/completions/asdf.bash
-
-# Add linuxbrew to PATHs
+# Add Linuxbrew PATH and manpage
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+
+# Add Rubymine PATH
+export PATH="/opt/RubyMine-2017.3/bin:$PATH"
+
+# Add Teamocil autocompletion
+compctl -g '~/.teamocil/*(:t:r)' teamocil
+
