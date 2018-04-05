@@ -45,7 +45,7 @@ Install
 Clone onto your laptop:
 
     cd ~/Development
-    git clone git@github.com:jnetzfisch/dotfiles.git
+    git clone git@github.com:netzfisch/dotfiles.git
     git clone git@github.com:thoughtbot/dotfiles.git dotfiles/thoughtbot
 
 Generate the "glue":
