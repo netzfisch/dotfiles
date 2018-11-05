@@ -10,11 +10,11 @@ source ~/.asdf/completions/asdf.bash
 
 # Add Android-SDK PATH
 if [ "$(uname)" == "Darwin" ]; then
-  export ANDROID_SDK_HOME=/usr/local/share/android-sdk
+  export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  export ANDROID_SDK_HOME=$HOME/.android/sdk
+  export ANDROID_SDK_ROOT=$HOME/.android-sdk
 fi
-export PATH=${PATH}:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools
+export PATH=${PATH}:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools
 
 # Add Google Cloud SDK PATH and autocompletion
 if [ -d '~/.google-cloud-sdk' ]; then
