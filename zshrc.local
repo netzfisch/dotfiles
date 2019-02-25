@@ -8,6 +8,9 @@
 source ~/.asdf/asdf.sh
 source ~/.asdf/completions/asdf.bash
 
+# Add Android-STUDIO PATH
+export PATH=${PATH}:$HOME/.android-studio/bin
+
 # Add Android-SDK PATH
 if [ "$(uname)" == "Darwin" ]; then
   export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
