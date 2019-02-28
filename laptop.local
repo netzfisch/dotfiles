@@ -2,7 +2,7 @@
 
 echo "### install own linux packages ..."
 echo "##################################"
-sudo apt install --assume-yes aptitude libsqlite3-dev openjdk-8-jre mc shellcheck
+sudo apt install --assume-yes aptitude httpie libsqlite3-dev openjdk-8-jre mc shellcheck
 
 echo "### install own ruby gems ..."
 echo "#############################"
