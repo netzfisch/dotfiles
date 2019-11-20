@@ -8,6 +8,10 @@
 source ~/.asdf/asdf.sh
 source ~/.asdf/completions/asdf.bash
 
+# Add JAVA_HOME path for Visual-Studio-Code
+#source ~/.asdf/plugins/java/asdf-java-wrapper.zsh
+export JAVA_HOME=$(\asdf where java ${match[1]})
+
 # Add Android-STUDIO PATH
 export PATH=${PATH}:$HOME/.android-studio/bin
 
