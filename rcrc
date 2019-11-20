@@ -1,3 +1,8 @@
+# First time run '$ env RCRC=$HOME/Development/dotfiles/rcrc rcup',
+#
+# After initial installation run rcup without one-time variable RCRC being set,
+# cause rcup will symlink the repo's rcrc to ~/.rcrc for future runs of rcup.
+
 EXCLUDES="README* LICENSE thoughtbot"
 DOTFILES_DIRS="$HOME/Development/dotfiles $HOME/Development/dotfiles/thoughtbot"
 SYMLINK_DIRS="config/mc teamocil"
