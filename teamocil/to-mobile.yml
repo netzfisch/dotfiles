@@ -1,0 +1,40 @@
+# Usage
+# -----
+# $ tmux -2
+# $ teamocil --list
+# $ teamocil to-mobile
+#
+# switch panes with 'CTRL+s q 0..9 / arrow-keys'
+# switch tabs with  'CTRL+s n / 0..9'
+# detach tmux with  'CTRL+s d'
+#
+# $ tmux attach -t mysession
+# $ tmux kill-server
+
+name: tom
+windows:
+  - name: cheat-sheet
+    root: ~/
+    panes:
+      - head -12 .teamocil/to-web.yml
+
+  - name: base
+    root: ~/Development/to-mobile
+    layout: main-horizontal
+    panes:
+      - ionic serve
+      - commands:
+        - git status
+    focus: true
+
+  - name: code
+    root: ~/Development/to-mobile
+    panes:
+      - vim
+
+  - name: console
+    root: ~/Development/to-mobile
+    layout: main-vertical
+    panes:
+      - mc
+      - ll

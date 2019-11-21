@@ -1,0 +1,46 @@
+# Usage
+# -----
+# $ tmux -2
+# $ teamocil --list
+# $ teamocil to-web
+#
+# switch panes with 'CTRL+s q 0..9 / arrow-keys'
+# switch tabs with  'CTRL+s n / 0..9'
+# detach tmux with  'CTRL+s d'
+#
+# $ tmux attach -t mysession
+# $ tmux kill-server
+
+name: tow
+windows:
+  - name: cheat-sheet
+    root: ~/
+    panes:
+      - head -12 .teamocil/to-web.yml
+
+  - name: base
+    root: ~/Development/to-web
+    layout: main-horizontal
+    panes:
+      - rails server
+      - commands:
+          - git status
+        focus: true
+
+  - name: test
+    root: ~/Development/to-web
+    panes:
+      - bundle exec guard
+
+  - name: code
+    root: ~/Development/to-web
+    panes:
+      - vim
+    focus: true
+
+  - name: console
+    root: ~/Development/to-web
+    layout: main-vertical
+    panes:
+      - mc
+      - rails console
