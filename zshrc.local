@@ -29,11 +29,6 @@ if [ -d '~/.google-cloud-sdk' ]; then
   source '~/.google-cloud-sdk/completion.zsh.inc';
 fi
 
-## Add Linuxbrew PATH and manpage
-#export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-#export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
-#export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
-
 # Add Rubymine PATH
 export PATH="/opt/RubyMine-2017.3/bin:$PATH"
 
