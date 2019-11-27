@@ -2,15 +2,9 @@
 
 echo "### install own linux packages ..."
 echo "##################################"
-sudo apt install --assume-yes aptitude httpie mc openjdk-8-jre postgresql-contrib libpq-dev libsqlite3-dev shellcheck
-
-echo "### install own ruby gems ..."
-echo "#############################"
-gem install foreman teamocil tldrb
-
-brew bundle --file=- <<EOF
-# nothing
-EOF
+sudo apt install --assume-yes \
+     aptitude httpie jp mc tldr shellcheck \
+     openjdk-8-jre postgresql-contrib libpq-dev libsqlite3-dev
 
 if [ -r "$HOME/.rcrc" ]; then
   echo "### updating dotfiles ..."

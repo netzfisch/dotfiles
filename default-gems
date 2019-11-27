@@ -1,4 +1,5 @@
 bundler
+iex-ruby-client
 teamocil
-tldrb
+#tldrb
 pry
