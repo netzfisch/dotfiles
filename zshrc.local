@@ -32,6 +32,9 @@ fi
 # Add Rubymine PATH
 export PATH="/opt/RubyMine-2017.3/bin:$PATH"
 
+# Change direct to coding projects
+export CDPATH=~/Development
+
 # Add Teamocil autocompletion
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
