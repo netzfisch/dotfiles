@@ -16,6 +16,10 @@ alias sdd='eval $(docker-machine env default)'
 # productivity
 alias todo='$EDITOR ~/Dropbox/todo'
 
+# system
+alias fm='sudo rmmod psmouse && sudo modprobe psmouse'
+alias us='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
+
 # translating
 alias tde='termit de en'
 alias ted='termit en de'
