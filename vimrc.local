@@ -12,5 +12,11 @@ call togglebg#map("<F5>")
 " Enable mouse usage for 'all modes'
 set mouse=a
 
+" Basic mapping of vim-shortcuts for NERDTree commands
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 " Set custom rspec command to use pre-loader spring in vim-rspec
 "let g:rspec_command = "!spring rspec {spec}"

@@ -69,44 +69,92 @@ Each time you want to update from upstream/master:
     git fetch upstream
     git rebase upstream/master
 
-You can safely run `rcup` multiple times to update.
+To install more or update VIM plugins do
+
+    rcup
+    vim$ :PlugInstall
+
+You can safely run `$ rcup` multiple times to update.
 
 What's in it?
 -------------
 
-**Everything** listed at ThoughtBot's [content](https://github.com/thoughtbot/dotfiles#whats-in-it)
-section and my ...
-
-[git](http://git-scm.com/) configuration:
-
-* aliases
-  * `l` for tight, colored, log output
-* name and email
-
-[vim](http://www.vim.org/) **default plugin** configuration ... to add further
-modify vimrc.bundle.local  and do `bash$: rcup` && `vim$: PlugInstall`:
-
-* [lean & mean status/tabline](https://github.com/bling/vim-airline)
-* [github color scheme](https://github.com/croaky/vim-colors-github)
-* [typescript syntax highlighting](https://github.com/leafgarland/typescript-vim)
-
 [zsh](http://zsh.sourceforge.net/FAQ/zshfaq01.html) configuration:
 
-* aliases
-  * `tde`, `ted`, `tds`, `tsd` to translate between englisch, german and
-    spanisch with [termit][termit]
-  * `todo` to edit a plain text todo-file, located in the Dropbox folder
-* `PATH` additions for
-  * [rbenv][rbenv]
-  * [Heroku toolbelt][heroku]
-  * [node modules][nvm]
-  * [Android SDK][android]
+* `b` for `bundle`.
+* `g` with no arguments is `git status` and with arguments acts like `git`.
+* `migrate` for `bin/rails db:migrate db:rollback && bin/rails db:migrate db:test:prepare`.
+* `mcd` to make a directory and change into it.
+* `replace foo bar **/*.rb` to find and replace within a given list of files.
+* `tat` to attach to tmux session named the same as the current directory.
+* `v` for `$VISUAL`.
+* local additions
+  * aliases
+    * `tde`, `ted`, `tds`, `tsd` to translate between englisch, german and
+      spanisch with [termit][termit]
+    * `todo` to edit a plain text todo-file, located in the Dropbox folder
+  * `PATH` additions for
+    * [rbenv][rbenv]
+    * [Heroku toolbelt][heroku]
+    * [node modules][nvm]
+    * [Android SDK][android]
 
 [termit]: https://github.com/pawurb/termit
 [rbenv]: https://github.com/sstephenson/rbenv
 [heroku]: https://toolbelt.heroku.com
 [nvm]: https://github.com/creationix/nvm#manual-install
 [android]: https://developer.android.com/sdk/installing/index.html?pkg=tools
+
+[tmux](http://robots.thoughtbot.com/a-tmux-crash-course)
+configuration:
+
+* Improve color resolution.
+* Remove administrative debris (session name, hostname, time) in status bar.
+* Set prefix to `Ctrl+s`
+* Soften status bar color from harsh green to light gray.
+
+[git](http://git-scm.com/) configuration:
+
+* Adds a `create-branch` alias to create feature branches.
+* Adds a `delete-branch` alias to delete feature branches.
+* Adds a `merge-branch` alias to merge feature branches into master.
+* Adds an `up` alias to fetch and rebase `origin/master` into the feature
+  branch. Use `git up -i` for interactive rebases.
+* Adds `post-{checkout,commit,merge}` hooks to re-index your ctags.
+* Adds `pre-commit` and `prepare-commit-msg` stubs that delegate to your local
+  config.
+* Adds `trust-bin` alias to append a project's `bin/` directory to `$PATH`.
+* local additions:
+  * Adds a `l` alias for tight, colored, log output
+  * configures 'name and email'
+
+[Ruby](https://www.ruby-lang.org/en/) configuration:
+
+* Add trusted binstubs to the `PATH`.
+* Load the ASDF version manager.
+
+[vim](http://www.vim.org/) configuration:
+
+* [fzf](https://github.com/junegunn/fzf.vim) for fuzzy file/buffer/tag finding.
+* [Rails.vim](https://github.com/tpope/vim-rails) for enhanced navigation of
+  Rails file structure via `gf` and `:A` (alternate), `:Rextract` partials,
+  `:Rinvert` migrations, etc.
+* Run many kinds of tests [from vim]([https://github.com/janko-m/vim-test)
+* Set `<leader>` to a single space.
+* Switch between the last two files with space-space.
+* Syntax highlighting for Markdown, HTML, JavaScript, Ruby, Go, Elixir, more.
+* Use [Ag](https://github.com/ggreer/the_silver_searcher) instead of Grep when
+  available.
+* Map `<leader>ct` to re-index ctags.
+* Use [vim-mkdir](https://github.com/pbrisbin/vim-mkdir) for automatically
+  creating non-existing directories before writing the buffer.
+* Use [vim-plug](https://github.com/junegunn/vim-plug) to manage plugins.
+* local added plugins:
+  * [lean & mean status/tabline](https://github.com/bling/vim-airline)
+  * [github color scheme](https://github.com/croaky/vim-colors-github)
+  * [typescript syntax highlighting](https://github.com/leafgarland/typescript-vim)
+  * [NERDTree](https://github.com/preservim/nerdtree)
+  * find further plugins at [VimAwesome](https://vimawesome.com/)
 
 Credits
 -------
