@@ -5,8 +5,10 @@
 #fi
 
 # Add asdf version manager
-source ~/.asdf/asdf.sh
-source ~/.asdf/completions/asdf.bash
+## append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+## initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
 # Add JAVA_HOME path for Visual-Studio-Code
 #source ~/.asdf/plugins/java/asdf-java-wrapper.zsh
