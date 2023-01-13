@@ -20,6 +20,9 @@ alias todo='$EDITOR ~/Dropbox/todo'
 alias fm='sudo rmmod psmouse && sudo modprobe psmouse'
 alias us='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
 
+# tmux
+alias tx=tmuxinator
+
 # translating
 alias tde='termit de en'
 alias ted='termit en de'

@@ -1,4 +1,5 @@
 bundler
 iex-ruby-client
-teamocil
+tmuxinator
+#tldrb
 pry
