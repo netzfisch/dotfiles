@@ -1,6 +1,6 @@
-# /home/harm/.config/tmuxinator/toweb.yml
+# /home/harm/.config/tmuxinator/to-web.yml
 
-name: toweb
+name: to-web
 root: ~/Development/to-web
 
 # Optional tmux socket
@@ -50,11 +50,16 @@ startup_window: editor
 windows:
   - server: bundle exec rails s # heroku local -p 3000
   - editor:
-      layout: main-vertical
+      # find custom layout configuration via '$ tmux list-windows'
+      layout: a0b2,256x63,0,0{161x63,0,0,1,94x63,162,0,3} # main-vertical
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
         - vim
         - bundle exec guard
-  - logs: tail -f log/development.log
+  - logs:
+      layout: even-horizontal
+      panes:
+        - git status
+        - tail -f log/development.log

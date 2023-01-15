@@ -3,3 +3,7 @@ bind _ split-window -v -p 25
 
 # Veritcal split pane, 80 columns wide
 bind | split-window -h -l 80
+
+# allow browsing in a common way
+set-window-option mode-keys vi
+set -g mouse on

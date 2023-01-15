@@ -1,5 +1,9 @@
-// cli-tools
+// cli-toola for a more intuitive version of 'du'
+du-dust
+
+// cli-tool to recursively searches directories for a regex pattern
+// while respecting your gitignore
 ripgrep
 
-// zellij - terminal workspace/multiplexer with many built-in features
-zellij
+// terminal workspace/multiplexer with many built-in features
+//zellij
