@@ -96,6 +96,7 @@ sudo apt update && sudo apt install --assume-yes \
   exuberant-ctags \
   g++ \
   git \
+  google-cloud-cli \
   heroku \
   imagemagick \
   keepassxc \
@@ -111,6 +112,14 @@ sudo apt update && sudo apt install --assume-yes \
   watchman \
   vim \
   zsh
+
+echo "### install docker packages ..."
+echo "###############################"
+
+# Use a convenience script, only for testing and development environments
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh ./get-docker.sh --dry-run
+sudo sh ./get-docker.sh
 
 echo "### install asdf version manager ..."
 echo "####################################"
