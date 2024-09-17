@@ -1,3 +1,4 @@
-ruby 3.1.4
-rust stable
-nodejs lts
+nodejs 20.17.0
+ruby 3.2.2
+rust lts
+yarn 1.22.22

@@ -13,6 +13,13 @@ fi
 # docker - set default docker machine
 alias sdd='eval $(docker-machine env default)'
 
+# git
+# usage: gsquash 3 (to squash the last 3 commits)
+gsquash() {
+  git reset --soft HEAD~"$1"
+  git commit --amend
+}
+
 # productivity
 alias todo='$EDITOR ~/Dropbox/todo'
 
