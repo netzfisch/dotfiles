@@ -98,8 +98,8 @@ free_space=true
 horizontal_split=false
 vertical_equal=true
 left_panel_size=95
+top_panel_size=0
 horizontal_equal=true
-top_panel_size=1
 
 [Misc]
 timeformat_recent=%b %e %H:%M
@@ -118,9 +118,8 @@ base_color=
 xterm-256color=
 color_terminals=
 
-screen-256color=
-
 [Panels]
+simple_swap=false
 show_mini_info=true
 kilobyte_si=false
 mix_all_files=false
@@ -141,10 +140,8 @@ torben_fj_mode=false
 quick_search_mode=2
 select_flags=6
 
-simple_swap=false
-
 [Panelize]
+Find *.orig after patching=find . -name \\*.orig -print
 Modified git files=git ls-files --modified
 Find rejects after patching=find . -name \\*.rej -print
-Find *.orig after patching=find . -name \\*.orig -print
 Find SUID and SGID programs=find . \\( \\( -perm -04000 -a -perm /011 \\) -o \\( -perm -02000 -a -perm /01 \\) \\) -print

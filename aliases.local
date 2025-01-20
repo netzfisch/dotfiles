@@ -21,7 +21,17 @@ gsquash() {
 }
 
 # productivity
-alias todo='$EDITOR ~/Dropbox/todo'
+alias todo='$EDITOR ~/Transfer/todo'
+
+# rails
+alias gd='bundle exec guard'
+
+# remote clone Transfer directory
+# open '$ crontab -e' and this line
+# 1,30 8,10,16,18  * * *  rclone bisync ~/Transfer h8:transfer --verbose >> ~/Downloads/rclone.log 2>&1
+alias rcl='cat ~/Downloads/rclone.log'
+alias rcs='rclone bisync ~/Transfer h8:transfer --verbose'
+alias rcr='rclone bisync ~/Transfer h8:transfer --verbose --resync'
 
 # system
 alias fm='sudo rmmod psmouse && sudo modprobe psmouse'
